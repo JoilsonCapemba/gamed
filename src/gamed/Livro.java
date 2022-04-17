@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Livro extends Obra implements Serializable{
-    
     private ArrayList<String> autores;
     private String ISBN;
     

@@ -33,7 +33,7 @@ public class GAMED {
                 menuDeGestaoDeObras(obras);
                 break;
             case 5:
-                menuDeGestaoDeRequisicoes(obras);
+                menuDeGestaoDeRequisicoes(obras, utentes);
                 break;
             default:
                 System.out.println("Opcao invalida!");

@@ -99,4 +99,9 @@ public class Request_Obra {
         }
         return null;
     }
+    
+    public static String requestWorkId(){
+        System.out.println("Id da Obra: ");        
+        return read.next();
+    }
 }

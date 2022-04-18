@@ -3,8 +3,12 @@ package gamed.Menus;
 import gamed.DVD;
 import gamed.Livro;
 import gamed.Obra;
+import gamed.Requisicoes;
+import static gamed.Requisicoes.requisitar;
 import gamed.Utente;
 import static gamed.exception.Request_Obra.*;
+import gamed.exception.Request_utente;
+import static gamed.exception.Request_utente.requestUserId;
 import gamed.serializacao.Serializacao;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -127,13 +131,15 @@ public class GerenciadorMenu {
         } while (opcaoMenuObras != 4);
     }
 
-    public static void menuDeGestaoDeRequisicoes(ArrayList<Obra> obras) {
+    public static void menuDeGestaoDeRequisicoes(ArrayList<Obra> obras, ArrayList<Utente> utentes) {
         int opcaoMenuRequisicoes = 0;
         do {
             showMenuDeRequisicoes();
             opcaoMenuRequisicoes = read.nextInt();
             switch (opcaoMenuRequisicoes) {
                 case 1:
+                    requisitar(obras,requestUserId(utentes), requestWorkId());
+                    //System.out.println(requisitar(obras,requestUserId(utentes), requestWorkId())? "Requisicao feita com ": "Requisicao sem Sucesso");
                     break;
                 case 2:
                     showObras(obras);

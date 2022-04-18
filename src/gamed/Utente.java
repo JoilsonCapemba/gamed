@@ -1,12 +1,21 @@
 package gamed;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Date;
 
 public class Utente implements Serializable{
     private int numeroDeUtente;
     private String nome;
     private String E_mail;
     private String situacaoDoUtente;
+    private ArrayList<ObraRequisitada> obrasRequisitadas;
+
+    public Utente() {
+        this.obrasRequisitadas = new ArrayList();
+    }
+    
+    
 
     public int getNumeroDeUtente() {
         return numeroDeUtente;
@@ -39,6 +48,15 @@ public class Utente implements Serializable{
     public void setSituacaoDoUtente(String situacaoDoUtente) {
         this.situacaoDoUtente = situacaoDoUtente;
     }
+
+    public ArrayList<ObraRequisitada> getObrasRequisitadas() {
+        return obrasRequisitadas;
+    }
+
+    public void setObrasRequisitadas(ObraRequisitada obrarequisitada) {
+        this.obrasRequisitadas.add(obrarequisitada);
+    }
+    
     
     @Override
     public String toString(){

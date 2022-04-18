@@ -2,6 +2,18 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/LENOVO/Desktop/poo/src/gamed/GAMED.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/poo/src/gamed/ObraRequisitada.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/poo/src/gamed/exception/Request_Obra.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/poo/src/gamed/Utente.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/poo/src/gamed/Menus/GerenciadorMenu.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/poo/src/gamed/DVD.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/poo/src/gamed/serializacao/Serializacao.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/poo/src/gamed/Requisicoes.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/poo/src/gamed/exception/Request_utente.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/poo/src/gamed/exception/Request_requisicoes.java</file>
+            <file>file:/C:/Users/LENOVO/Desktop/poo/src/gamed/Livro.java</file>
+        </group>
     </open-files>
 </project-private>

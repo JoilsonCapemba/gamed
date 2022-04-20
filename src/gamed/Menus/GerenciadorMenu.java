@@ -13,6 +13,9 @@ import gamed.serializacao.Serializacao;
 import java.util.ArrayList;
 import java.util.Scanner;
 import static gamed.serializacao.Serializacao.*;
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 
 public class GerenciadorMenu {
 
@@ -66,6 +69,7 @@ public class GerenciadorMenu {
         do {
             showMenuDeGestaoDeUtentes();
             opcaoMenuUtente = read.nextInt();
+            clear();
             switch (opcaoMenuUtente) {
                 case 1:
                     Utente utente = new Utente();
@@ -79,6 +83,7 @@ public class GerenciadorMenu {
                     if (querSalvar("Utente: " + utente.toString()) == true) {
                         utentes.add(utente);
                     }
+                    clear();
                     break;
                 case 2:
                     System.out.println("Numero do utente: ");
@@ -119,6 +124,7 @@ public class GerenciadorMenu {
                     if (querSalvar("Obra: " + obra.toString()) == true) {
                         obras.add(obra);
                     }
+                    clear();
                     break;
                 case 2:
                     showObras(obras);
@@ -136,10 +142,10 @@ public class GerenciadorMenu {
         do {
             showMenuDeRequisicoes();
             opcaoMenuRequisicoes = read.nextInt();
+            clear();
             switch (opcaoMenuRequisicoes) {
                 case 1:
-                    requisitar(obras,requestUserId(utentes), requestWorkId());
-                    //System.out.println(requisitar(obras,requestUserId(utentes), requestWorkId())? "Requisicao feita com ": "Requisicao sem Sucesso");
+                    System.out.println(requisitar(obras,requestUserId(utentes), requestWorkId())? "Requisicao feita com ": "Requisicao sem Sucesso");
                     break;
                 case 2:
                     showObras(obras);
@@ -179,6 +185,7 @@ public class GerenciadorMenu {
                 System.out.println(utente.toString());
             }
         }
+        continuar();
     }
 
     public static void preencheDadosDaObra(Obra obra) {
@@ -217,6 +224,7 @@ public class GerenciadorMenu {
                 }
             }
         }
+        continuar();
     }
 
     public static boolean querSalvar(String elementoAserSalvo) {
@@ -225,5 +233,23 @@ public class GerenciadorMenu {
 
         String opcaoSalvar = read.next().toUpperCase();
         return (opcaoSalvar.equals("S"));
+    }
+    
+    public final static void clear() {
+        try {
+            Robot robot = new Robot();
+            robot.setAutoDelay(10);
+            robot.keyPress(KeyEvent.VK_CONTROL);
+            robot.keyPress(KeyEvent.VK_L);
+            robot.keyRelease(KeyEvent.VK_CONTROL);
+            robot.keyRelease(KeyEvent.VK_L);
+        } catch (AWTException ex) {
+        }
+    }
+    
+    public static void continuar(){
+        System.out.println("Clique em qualquer tecla para continuar");
+        read.next();
+        clear();
     }
 }

@@ -10,11 +10,11 @@ public class GAMED {
         ArrayList<Utente> utentes = new ArrayList();
         ArrayList<Obra> obras = new ArrayList();
         
-        System.out.println(utentes.size());
         int opcaoPrincipal;
         do{
             showMenuPrincipal();
             opcaoPrincipal = read.nextInt();
+            clear();
             
             switch(opcaoPrincipal){
             case 1:
